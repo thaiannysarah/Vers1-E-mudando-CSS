@@ -22,10 +22,20 @@
         }
 
         .principal0 {
-            width: 50%;
-            background-color: rgb(199, 58, 58);
-            border: solid 2px;
+            width: 100%;
+            height: 1500px;
+            
+            border: solid 3px;
             border-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .principal0 .h2{
+            color: antiquewhite;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: 40px;
+            width: 40%;
+            
         }
 
         .principal {
@@ -46,9 +56,9 @@
             
             background-attachment: fixed;
             background-size: 100%;
-            background-image: url("agenda.jpg");
+            background-image: url("wall.jpg");
             background-repeat: no-repeat;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(129, 13, 13);
         }
     </style>
 </head>
@@ -57,16 +67,16 @@
     <center>
         <div class="principal0" id="d1">
             <div>        
-                <h2>Login</h2>
-                <div class="input-group"> 
+                <h2 class="h2">Login</h2>
+                <div class="input-group" style="color:rgb(253, 244, 244);"> 
                     Nome:
                     <br>
                     <input id="nm" type="text" maxlength="10" placeholder="Digite seu nome"  required>
                 </div>
                 <br>
 
-                <div class="input-group">
-                    login: 
+                <div class="input-group" style="color:rgb >
+                    Email: 
                     <br>
                     <input id="lg" type="email" minlength="10" placeholder="Digite seu email"  required>
                 </div>
@@ -178,12 +188,14 @@
             var login = document.getElementById('lg').value;
             
             var conf = 1;
-            if(conf == 1 && name == 0 ){
+            if( name == 0 ){
                 alert("o nome deve ser preenchido");
             }else{
                 conf = conf+1;
             }
-            if(conf == 2 && login !== /@/){
+            if(login.includes('@')){
+               
+            }else{
                 alert("coloque um email valido")
             }
             if(conf == 3 && senha0 == senha1 ){
